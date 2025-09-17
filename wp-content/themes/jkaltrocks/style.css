@@ -17,7 +17,6 @@ License: MIT
 }
 
 section {
-  padding-top: 4rem;
   position: relative;
 }
 
@@ -210,6 +209,7 @@ section {
 }
 
 .hero-section {
+  min-height: 90vh;
   position: relative;
 }
 .hero-section-bg-image {
@@ -309,6 +309,71 @@ section {
   height: 1.5rem;
   transition: all 0.3s ease-in-out;
   width: 1.5rem;
+}
+
+.services-section {
+  background-color: #dceae5;
+  padding-bottom: 6rem;
+  padding-top: 4rem;
+}
+.services-section-container h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  color: #009a61;
+  margin-bottom: 5rem;
+}
+.services-section-container .services-grid {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+@media (min-width: 768px) {
+  .services-section-container .services-grid {
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .services-section-container .services-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.services-section-container .services-grid .service-cell figure {
+  margin: 0 auto 1.5rem auto;
+  width: 5rem;
+}
+.services-section-container .services-grid .service-cell figure img {
+  object-fit: cover;
+  width: 100%;
+}
+.services-section-container .services-grid .service-cell h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  color: #2c2c2c;
+  margin-bottom: 1.5rem;
+}
+.services-section-container .services-grid .service-cell .service-divider {
+  background-color: #2c2c2c;
+  height: 3px;
+  margin: 0 auto 1.5rem auto;
+  width: 3rem;
+}
+.services-section-container .services-grid .service-cell p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.75;
+  color: #2c2c2c;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

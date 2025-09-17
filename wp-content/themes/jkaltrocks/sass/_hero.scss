@@ -1,6 +1,7 @@
 @use 'config' as *;
 
 .hero-section {
+    min-height: 90vh;
     position: relative;
 
     &-bg-image {

@@ -11,17 +11,17 @@ $hero_heading_bottom = get_field('hero_heading_bottom');
 $hero_image = get_field('hero_image');
 $cta_btn_label   = get_field('cta_button_label');
 
+// Services Section
+$services_heading = get_field('services_section_heading');
+$services = get_field('services');
+
 // Discography Section
 $discography_heading = get_field('discography_section_heading');
-$discography_args = array(
-    'post_type' => 'album',
-    'orderby' => 'order',
-    'order' => 'desc'
-);
-$discography_query = new WP_Query($discography_args);
+$albums = get_field('albums');
 
 // Contact Section
 $contact_heading = get_field('contact_section_heading');
+$contact_description = get_field('contact_section_description');
 
 // Footer
 $footer_heading = get_field('footer_heading');
@@ -32,6 +32,7 @@ $footer_rights_reserved = get_field('footer_rights_reserved');
 ?>
 
 <main>
+    <!-- Hero Section -->
     <div class="hero-section">
         <div class="hero-section-bg-image" style="background-image: url(<?php echo $hero_image['url']; ?>); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
         <div class="hero-section-gradient"></div>
@@ -44,12 +45,34 @@ $footer_rights_reserved = get_field('footer_rights_reserved');
                 </h1>
                 <h2><?= esc_html($hero_subtitle); ?></h2>
                 <a href="#contact" class="cta-btn">
-                    <?= esc_html($cta_btn_label ); ?>
+                    <?= esc_html($cta_btn_label); ?>
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/icon-btn-arrow.svg'; ?>" alt="Arrow">
                 </a>
             </div>
         </div>
     </div>
+    <!-- Services Section -->
+    <section class="services-section side-padding">
+        <div class="services-section-container container-lg">
+            <h2><?= esc_html($services_heading) ?></h2>
+            <div class="services-grid">
+                <?php
+                    if ($services) {
+                        foreach ($services as $service) { 
+                            echo '<div class="service-cell">';
+                            echo '<figure>';
+                            echo '<img src="' . esc_url($service['service_icon']['url']) . '" alt="' . esc_attr($service['service_icon']['alt']) . '">';
+                            echo '</figure>';
+                            echo '<h3>' . esc_html($service['service_heading']) . '</h3>';
+                            echo '<div class="service-divider"></div>';
+                            echo '<p>' . esc_html($service['service_description']) . '</p>';
+                            echo '</div>';
+                        }
+                    }
+                ?>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>

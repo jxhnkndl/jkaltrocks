@@ -1,0 +1,62 @@
+@use 'config' as *;
+
+.services-section {
+    background-color: $primary-light;
+    padding-bottom: 6rem;
+    padding-top: 4rem;
+
+    &-container {
+        h2 {
+            @include text-section-heading;
+            color: $primary;
+            margin-bottom: 5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            gap: 4rem;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+
+            @include tablet {
+                gap: 2rem;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include laptop {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+
+            .service-cell {
+                figure {
+                    margin: 0 auto 1.5rem auto;
+                    width: 5rem;
+
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                }
+
+                h3 {
+                    @include text-service-heading;
+                    color: $dark;
+                    margin-bottom: 1.5rem;
+                }
+
+                .service-divider {
+                    background-color: $dark;
+                    height: 3px;
+                    margin: 0 auto 1.5rem auto;
+                    width: 3rem;
+                }
+
+                p {
+                    @include text-body;
+                    color: $dark;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
