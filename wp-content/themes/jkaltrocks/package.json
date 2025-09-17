@@ -1,0 +1,13 @@
+{
+    "name": "jkaltrocks",
+    "version": "1.0.0",
+    "description": "Website for alternative rock/pop producer J.K. Royston",
+    "scripts": {
+        "watch": "sass --watch ./sass/main.scss ./style.css"
+    },
+    "author": "J.K. Royston",
+    "license": "ISC",
+    "devDependencies": {
+        "sass": "^1.92.0"
+    }
+}

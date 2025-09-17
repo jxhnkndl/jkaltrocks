@@ -1,0 +1,178 @@
+@use 'config' as *;
+
+.header {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 5;
+
+    &-container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        height: clamp(3.75rem, 2.391rem + 5.435vw, 5rem);
+
+        .logo {
+            @include text-brand;
+            align-items: center;
+            color: $light;
+            display: flex;
+            gap: 0.5rem;
+            position: relative;
+            z-index: 10;
+
+            .icon-waveform-light {
+                display: block;
+                opacity: 1;
+            }
+
+            .icon-waveform-primary {
+                display: none;
+                opacity: 0;
+            }
+        }
+
+        .desktop-nav {
+            &-links {
+                display: none;
+
+                @include tablet {
+                    align-items: center;
+                    display: flex;
+                    gap: 0.5rem;
+                    list-style: none;
+            
+                    .desktop-nav-link-container {
+                        border-radius: 4px;
+                        padding: 0.5rem 0.75rem;
+                        transition: all 0.1s ease-in-out;
+
+                        &:hover {
+                            background-color: $light;
+                            
+                            .desktop-nav-link {
+                                color: $dark;
+                            }
+                        }
+                    }
+
+                    .desktop-nav-link {
+                        @include text-desktop-nav-link;
+                        color: $light;
+                        transition: all 0.1s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .menu-icon-container {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            position: relative;
+            width: 2.5rem;
+            z-index: 10;
+
+            @include tablet {
+                display: none;
+            }
+
+            .menu-icon {
+                align-items: flex-end;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                justify-content: center;
+
+                .menu-bar {
+                    background-color: $light;
+                    height: 2px;
+
+                    &-top {
+                        width: 40px;
+                    }
+
+                    &-bottom {
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mobile-nav {
+    background-color: $light;
+    color: $dark;
+    display: none;
+    flex-direction: column;
+    inset: 0;
+    justify-content: space-between;
+    min-height: 100vh;
+    opacity: 0;
+    position: fixed;
+    z-index: 4;
+
+    @include tablet {
+        display: none;
+    }
+
+    .mobile-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        list-style: none;
+        margin-top: 7rem; 
+        width: 100%;
+
+        .mobile-nav-link-container {
+            height: 2.5rem;
+
+            .mobile-nav-link {
+                @include text-mobile-nav-link;
+                align-items: center;
+                color: $dark;
+                display: flex;
+                gap: 1rem;
+
+                .color-bar {
+                    background-color: $primary;
+                    border-radius: 0.5rem;
+                    height: 2.5rem;
+                    flex: 1;
+                }
+            }
+        }
+    }
+
+    .mobile-nav-footer {
+        border-top: 1px solid $low-alpha-dark;
+        padding: 1.75rem 0 3rem 0;
+
+        .mobile-nav-footer-cta {
+            @include text-mobile-nav-cta;
+            align-items: center;
+            background-color: $primary;
+            border-radius: 8px;
+            color: $light;
+            display: flex;
+            height: 2.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            width: 10rem;
+        }
+
+        p {
+            @include text-footer;
+            color: $dark;
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+@use 'config' as *;
+
+.hero-section {
+    position: relative;
+
+    &-bg-image {
+        inset: 0;
+        min-height: 90vh;
+        position: absolute;
+        z-index: 2;
+    }
+
+    &-gradient {
+        background: $hero_gradient;
+        inset: 0;
+        min-height: 90vh;
+        opacity: 0.8;
+        position: absolute;
+        z-index: 3;
+    }
+
+    &-content-wrapper {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        inset: 0;
+        justify-content: center;
+        min-height: 85vh;
+        position: absolute;
+        z-index: 3;
+
+        .hero-content {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                @include text-hero-subheading;
+                color: $light;
+                margin-bottom: clamp(0.5rem, -0.043rem + 2.174vw, 1rem);
+                order: 1;
+            }
+
+            h1 {
+                @include text-hero-heading;
+                align-items: center;
+                color: $light;
+                display: flex;
+                flex-direction: column;
+                line-height: 1;
+                margin-bottom: 4rem;
+                order: 2;
+
+                @include tablet {
+                    line-height: 0.9;
+                }
+
+                span {
+                    display: block;
+                }
+            }
+
+            .cta-btn {
+                @include text-cta-btn-label;
+                align-items: center;
+                background-color: $secondary;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba($color: $dark, $alpha: 0.65);
+                color: $dark;
+                display: flex;
+                gap: 0.5rem;
+                height: 4rem;
+                justify-content: center;
+                order: 3;
+                transition: opacity 0.5s ease-in-out;
+                width: 100%;
+                
+                @include mobile-wide {
+                    width: 20rem;
+                }
+
+                @include tablet {
+                    &:hover {
+                        opacity: 0.9;
+
+                        img {
+                            transform: translateX(5px);
+                        }
+                    }
+                }
+
+                img {
+                    height: 1.5rem;
+                    transition: all 0.3s ease-in-out;
+                    width: 1.5rem;
+                }
+            }
+        }
+    }
+}
