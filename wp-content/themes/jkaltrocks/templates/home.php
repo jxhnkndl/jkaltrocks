@@ -9,7 +9,7 @@ $hero_heading_top = get_field('hero_heading_top');
 $hero_heading_middle = get_field('hero_heading_middle');
 $hero_heading_bottom = get_field('hero_heading_bottom');
 $hero_image = get_field('hero_image');
-$cta_btn_text = get_field('cta_button_text');
+$cta_btn_label   = get_field('cta_button_label');
 
 // Discography Section
 $discography_heading = get_field('discography_section_heading');
@@ -44,7 +44,7 @@ $footer_rights_reserved = get_field('footer_rights_reserved');
                 </h1>
                 <h2><?= esc_html($hero_subtitle); ?></h2>
                 <a href="#contact" class="cta-btn">
-                    <?= esc_html($cta_btn_text); ?>
+                    <?= esc_html($cta_btn_label ); ?>
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/icon-btn-arrow.svg'; ?>" alt="Arrow">
                 </a>
             </div>
