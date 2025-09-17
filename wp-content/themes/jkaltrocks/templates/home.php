@@ -1,5 +1,4 @@
 <?php /* Template Name: Home */ ?>
-<?php error_log('USING TEMPLATE: ' . __FILE__); ?>
 <?php get_header(); ?>
 
 <?php 
@@ -11,15 +10,6 @@ $hero_heading_middle = get_field('hero_heading_middle');
 $hero_heading_bottom = get_field('hero_heading_bottom');
 $hero_image = get_field('hero_image');
 $cta_btn_text = get_field('cta_button_text');
-
-// Services Section
-$services_heading = get_field('services_section_heading'); 
-$services_args = array(
-    'post_type' => 'service',
-    'orderby' => 'order',
-    'order' => 'DESC'
-);
-$services_query = new WP_Query($services_args);
 
 // Discography Section
 $discography_heading = get_field('discography_section_heading');

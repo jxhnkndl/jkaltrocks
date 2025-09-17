@@ -1,5 +1,4 @@
 <?php
-
 // Theme version
 
 $version = wp_get_theme()->get( 'Version' );
@@ -12,7 +11,6 @@ add_filter('show_admin_bar', '__return_false');
 
 function jk_remove_default_fields() {
     remove_post_type_support( 'page', 'editor' );
-    remove_post_type_support( 'service', 'editor' );
     remove_post_type_support( 'album', 'editor' );
 }
 
