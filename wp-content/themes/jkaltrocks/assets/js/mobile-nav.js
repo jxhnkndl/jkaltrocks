@@ -7,12 +7,6 @@ const menuBarBottomEl = document.querySelector('.menu-bar-bottom');
 const mobileNavEl = document.querySelector('.mobile-nav');
 const mobileLinksArr = document.querySelectorAll('.mobile-nav-link-container');
 
-menuEl.addEventListener('click', () => {
-    const isOpen = JSON.parse(menuEl.getAttribute('aria-expanded'));
-    menuEl.setAttribute('aria-expanded', !isOpen);
-    isOpen ? closeNav() : openNav();
-});
-
 const openNav = () => {
     mobileNavEl.style.display = 'flex';
     iconPrimaryEl.style.display = 'block';
@@ -124,3 +118,9 @@ const closeNav = () => {
         mobileNavEl.style.display = 'none';
     }, 250);
 }
+
+menuEl.addEventListener('click', () => {
+    const isOpen = JSON.parse(menuEl.getAttribute('aria-expanded'));
+    menuEl.setAttribute('aria-expanded', !isOpen);
+    isOpen ? closeNav() : openNav();
+});
