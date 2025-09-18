@@ -1,3 +1,3 @@
-document.addEventListener('DOMContentLoaded', (e) => {
-    gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
 });

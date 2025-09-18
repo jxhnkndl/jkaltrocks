@@ -43,16 +43,7 @@ function jk_enqueue_scripts() {
     wp_enqueue_script(
         'jk-gsap-animation-scroll-trigger',
         'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js',
-        array(),
-        '3.13.0',
-        true
-    );
-
-    // GSAP smooth scroll
-    wp_enqueue_script(
-        'jk-gsap-animation-smooth-scroll',
-        'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js',
-        array(),
+        array('jk-gsap-animation'),
         '3.13.0',
         true
     );
@@ -62,7 +53,7 @@ function jk_enqueue_scripts() {
     wp_enqueue_script(
         'jk-gsap-installation',
         get_template_directory_uri() . '/assets/js/install-gsap.js',
-        array(),
+        array('jk-gsap-animation', 'jk-gsap-animation-scroll-trigger'),
         wp_get_theme()->get('Version'),
         true
     );
@@ -72,16 +63,16 @@ function jk_enqueue_scripts() {
     wp_enqueue_script(
         'jk-mobile-nav-js',
         get_template_directory_uri() . '/assets/js/mobile-nav.js',
-        array(),
+        array('jk-gsap-animation', 'jk-gsap-animation-scroll-trigger'),
         wp_get_theme()->get('Version'),
         true
     );
 
     // Intro animation
         wp_enqueue_script(
-        'jk-intro-animation-js',
-        get_template_directory_uri() . '/assets/js/intro-animation.js',
-        array(),
+        'jk-page-animations-js',
+        get_template_directory_uri() . '/assets/js/page-animations.js',
+        array('jk-gsap-animation', 'jk-gsap-animation-scroll-trigger'),
         wp_get_theme()->get('Version'),
         true
     );
