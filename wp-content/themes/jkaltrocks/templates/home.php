@@ -22,6 +22,7 @@ $about_image = get_field('about_section_image');
 
 // Discography Section
 $discography_heading = get_field('discography_section_heading');
+$credits_key = get_field('credits_key');
 $albums = get_field('albums');
 
 // Contact Section
@@ -62,7 +63,7 @@ $footer_rights_reserved = get_field('footer_rights_reserved');
             <h2><?= esc_html($services_heading) ?></h2>
             <div class="services-grid">
                 <?php
-                    if ($services) {
+                    if (!empty($services)) {
                         foreach ($services as $service) { 
                             echo '<div class="service-cell">';
                             echo '<figure>';
@@ -91,6 +92,32 @@ $footer_rights_reserved = get_field('footer_rights_reserved');
                         <img src="<?= esc_url($about_image['url']) ?>" alt="<?= esc_attr($about_image['alt']); ?>">
                     </figure>
                 </div>
+            </div>
+        </div>
+    </section>
+    <!-- Discography Section -->
+    <section class="discography-section side-padding">
+        <div class="discography-section-container container-lg">
+            <h2><?= esc_html($discography_heading); ?></h2>
+            <p class="credits-key"><?= esc_html($credits_key); ?></p>
+            <div class="album-grid">
+                <?php
+                    if (!empty($albums)) {
+                        foreach ($albums as $album) { 
+                            echo '<a class="album-link" href="' . esc_url($album['listen_link']) . '" target="_blank">';
+                            echo '<div class="album-cell">';
+                            echo '<figure>';
+                            echo '<img src="' . esc_url($album['cover_art']['url']) . '" alt="' . esc_attr($album['cover_art']['alt']) . '">';
+                            echo '<div class="button-overlay">';
+                            echo '<img src="' . get_template_directory_uri() . '/assets/images/icon-play-button.svg" alt="Play Button" />"';
+                            echo '</div>';
+                            echo '</figure>';
+                            echo '<p>' . esc_html($album['credits']) . '</p>';
+                            echo '</div>';
+                            echo '</a>';
+                        }
+                    }
+                ?>
             </div>
         </div>
     </section>
