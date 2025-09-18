@@ -15,6 +15,11 @@ $cta_btn_label   = get_field('cta_button_label');
 $services_heading = get_field('services_section_heading');
 $services = get_field('services');
 
+// About Section
+$about_heading = get_field('about_section_heading');
+$about_body = get_field('about_section_body');
+$about_image = get_field('about_section_image');
+
 // Discography Section
 $discography_heading = get_field('discography_section_heading');
 $albums = get_field('albums');
@@ -34,7 +39,7 @@ $footer_rights_reserved = get_field('footer_rights_reserved');
 <main>
     <!-- Hero Section -->
     <div class="hero-section">
-        <div class="hero-section-bg-image" style="background-image: url(<?php echo $hero_image['url']; ?>); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
+        <div class="hero-section-bg-image" style="background-image: url(<?= $hero_image['url']; ?>); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
         <div class="hero-section-gradient"></div>
         <div class="hero-section-content-wrapper">
             <div class="hero-content side-padding">
@@ -46,7 +51,7 @@ $footer_rights_reserved = get_field('footer_rights_reserved');
                 <h2><?= esc_html($hero_subtitle); ?></h2>
                 <a href="#contact" class="cta-btn">
                     <?= esc_html($cta_btn_label); ?>
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/icon-btn-arrow.svg'; ?>" alt="Arrow">
+                    <img src="<?= get_template_directory_uri() . '/assets/images/icon-btn-arrow.svg'; ?>" alt="Arrow">
                 </a>
             </div>
         </div>
@@ -70,6 +75,22 @@ $footer_rights_reserved = get_field('footer_rights_reserved');
                         }
                     }
                 ?>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="about-section side-padding">
+        <div class="about-section-container container-lg">
+            <h2><?= esc_html($about_heading); ?></h2>
+            <div class="about-grid">
+                <div class="about-section-text">
+                    <?= wp_kses_post($about_body); ?>
+                </div>
+                <div class="about-section-image">
+                    <figure>
+                        <img src="<?= esc_url($about_image['url']) ?>" alt="<?= esc_attr($about_image['alt']); ?>">
+                    </figure>
+                </div>
             </div>
         </div>
     </section>
