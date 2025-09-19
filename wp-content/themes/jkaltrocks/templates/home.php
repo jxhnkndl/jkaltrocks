@@ -29,12 +29,6 @@ $albums = get_field('albums');
 $contact_heading = get_field('contact_section_heading');
 $contact_description = get_field('contact_section_description');
 
-// Footer
-$footer_heading = get_field('footer_heading');
-$footer_location = get_field('footer_location');
-$footer_copyright = get_field('footer_copyright');
-$footer_rights_reserved = get_field('footer_rights_reserved');
-
 ?>
 
 <main>

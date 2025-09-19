@@ -1,0 +1,30 @@
+@use 'config' as *;
+
+.footer {
+    align-items: center;
+    background-color: $primary-light;
+    color: $dark;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 4rem 0;
+
+    .logo {
+        @include text-brand;
+        align-items: center;
+        color: $primary;
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    &-content {
+        p {
+            @include text-footer;
+            color: $dark;
+            margin-bottom: 0.25rem;
+        }
+    }
+}

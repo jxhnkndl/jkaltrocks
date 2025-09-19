@@ -207,6 +207,7 @@ input {
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   font-style: normal;
+  text-align: center;
   color: #2c2c2c;
 }
 .mobile-nav .mobile-nav-footer p span {
@@ -568,6 +569,37 @@ input {
   #wpforms-submit-127.wpforms-submit {
     width: auto;
   }
+}
+
+.footer {
+  align-items: center;
+  background-color: #dceae5;
+  color: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 4rem 0;
+}
+.footer .logo {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.25rem, 0.978rem + 1.087vw, 1.5rem);
+  font-style: normal;
+  font-weight: 600;
+  align-items: center;
+  color: #009a61;
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 10;
+}
+.footer-content p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  text-align: center;
+  color: #2c2c2c;
+  margin-bottom: 0.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */
