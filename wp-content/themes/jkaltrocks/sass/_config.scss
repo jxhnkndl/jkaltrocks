@@ -228,11 +228,11 @@ $font-brand: 'Poppins', sans-serif;
 // Contact form button label
 
 @mixin text-submit-btn-label {
-    font-family: $font-accent;
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 500;
-    text-transform: uppercase;
+    font-family: $font-primary !important;
+    font-size: 1rem !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
 }
 
 // Footer text
@@ -249,6 +249,10 @@ $font-brand: 'Poppins', sans-serif;
 
 section {
     position: relative;
+}
+
+input {
+    border-radius: 0.5rem;
 }
 
 .container-md {

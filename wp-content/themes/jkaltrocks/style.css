@@ -20,6 +20,10 @@ section {
   position: relative;
 }
 
+input {
+  border-radius: 0.5rem;
+}
+
 .container-md {
   margin: 0 auto;
   max-width: 53.125rem;
@@ -505,6 +509,65 @@ section {
 }
 .discography-section-container .album-grid .album-link .album-cell figure .button-overlay:hover img {
   opacity: 1;
+}
+
+.contact-section {
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+.contact-section-container h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  color: #009a61;
+  margin-bottom: clamp(2.5rem, 1.818rem + 2.727vw, 4rem);
+}
+
+.wpforms-field-label,
+.wpforms-field-label-inline {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.75;
+  color: #2c2c2c;
+}
+
+.wpforms-field-sublabel,
+.wpforms-field-description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.75;
+  color: #2c2c2c;
+  font-size: 0.875rem;
+}
+
+.wpforms-field-description {
+  margin-top: 1rem !important;
+}
+
+#wpforms-submit-127.wpforms-submit {
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 1rem !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  align-items: center;
+  background-color: #009a61;
+  border-radius: 0.5rem;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 4rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #wpforms-submit-127.wpforms-submit {
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

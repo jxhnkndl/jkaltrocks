@@ -121,6 +121,16 @@ $footer_rights_reserved = get_field('footer_rights_reserved');
             </div>
         </div>
     </section>
+    <section class="contact-section side-padding">
+        <div class="contact-section-container container-md">
+            <h2><?= esc_html($contact_heading); ?></h2>
+            <?php
+                if (function_exists('wpforms_display')) {
+                    wpforms_display(127, false); 
+                }
+            ?>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>
