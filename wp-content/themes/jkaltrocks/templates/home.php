@@ -52,7 +52,7 @@ $contact_description = get_field('contact_section_description');
         </div>
     </div>
     <!-- Services Section -->
-    <section class="services-section side-padding">
+    <section id="services" class="services-section side-padding">
         <div class="services-section-container container-lg">
             <h2><?= esc_html($services_heading) ?></h2>
             <div class="services-grid">
@@ -74,7 +74,7 @@ $contact_description = get_field('contact_section_description');
         </div>
     </section>
     <!-- About Section -->
-    <section class="about-section side-padding">
+    <section id="about" class="about-section side-padding">
         <div class="about-section-container container-lg">
             <h2><?= esc_html($about_heading); ?></h2>
             <div class="about-grid">
@@ -90,7 +90,7 @@ $contact_description = get_field('contact_section_description');
         </div>
     </section>
     <!-- Discography Section -->
-    <section class="discography-section side-padding">
+    <section id="discography" class="discography-section side-padding">
         <div class="discography-section-container container-lg">
             <h2><?= esc_html($discography_heading); ?></h2>
             <p class="credits-key"><?= esc_html($credits_key); ?></p>
@@ -115,7 +115,7 @@ $contact_description = get_field('contact_section_description');
             </div>
         </div>
     </section>
-    <section class="contact-section side-padding">
+    <section id="contact" class="contact-section side-padding">
         <div class="contact-section-container container-md">
             <h2><?= esc_html($contact_heading); ?></h2>
             <?php

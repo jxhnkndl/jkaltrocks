@@ -18,6 +18,7 @@ License: MIT
 
 section {
   position: relative;
+  scroll-margin-top: 5rem;
 }
 
 input {

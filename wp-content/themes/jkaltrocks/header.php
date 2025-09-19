@@ -19,7 +19,7 @@
                         <a href="#services" class="desktop-nav-link">Services</a>
                     </li>
                     <li class="desktop-nav-link-container desktop-nav-link-container-2">
-                        <a href="#purpose" class="desktop-nav-link">Purpose</a>
+                        <a href="#about" class="desktop-nav-link">Purpose</a>
                     </li>
                     <li class="desktop-nav-link-container desktop-nav-link-container-3">
                         <a href="#discography" class="desktop-nav-link">Discography</a>
@@ -28,7 +28,7 @@
                         <a href="https://www.instagram.com/jkaltrocks" target="_blank" class="desktop-nav-link">Content</a>
                     </li>
                     <li class="desktop-nav-link-container desktop-nav-link-container-5">
-                        <a href="#contact" class="desktop-nav-link">Apply</a>
+                        <a href="#contact" class="desktop-nav-link">Request Quote</a>
                     </li>
                 </ul>
             </nav>
@@ -68,7 +68,7 @@
                 <li class="mobile-nav-link-container">
                     <a href="#contact" class="mobile-nav-link mobile-nav-link-end">
                         <div class="color-bar"></div>
-                        Contact
+                        Request Quote
                     </a>
                 </li>
             </ul>
