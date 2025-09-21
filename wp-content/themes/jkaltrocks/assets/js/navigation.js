@@ -5,6 +5,7 @@ const menuEl = document.querySelector('.menu-icon-container');
 const menuBarTopEl = document.querySelector('.menu-bar-top');
 const menuBarBottomEl = document.querySelector('.menu-bar-bottom');
 const mobileNavEl = document.querySelector('.mobile-nav');
+const navLinksContainerEl = document.querySelector('.mobile-nav-links');
 const mobileLinksArr = document.querySelectorAll('.mobile-nav-link-container');
 
 const openNav = () => {
@@ -55,26 +56,12 @@ const openNav = () => {
             linkAnimationDelay += 0.25;
         }
 
-        if (i % 2 !== 0) {
-            x = '-100%';
-        } else {
-            x = '100%';
-        }
-
-        gsap.fromTo(
-            link,
-            {
-                x: x,
-                opacity: 0
-            },
-            {
-                x: '0%',
-                opacity: 1,
-                duration: 0.75,
-                delay: linkAnimationDelay,
-                ease: 'power2.inOut'
-            }
-        )
+        gsap.to(link, {
+            opacity: 1,
+            duration: 0.3,
+            delay: linkAnimationDelay,
+            ease: 'power2.inOut'
+        });
     });
 }
 
@@ -111,6 +98,10 @@ const closeNav = () => {
         opacity: 0
     });
 
+    mobileLinksArr.forEach((link) => {
+        gsap.set(link, { opacity: 0 });
+    })
+
     iconLightEl.style.display = 'block';
     iconPrimaryEl.style.display = 'none';
 
@@ -123,4 +114,10 @@ menuEl.addEventListener('click', () => {
     const isOpen = JSON.parse(menuEl.getAttribute('aria-expanded'));
     menuEl.setAttribute('aria-expanded', !isOpen);
     isOpen ? closeNav() : openNav();
+});
+
+navLinksContainerEl.addEventListener('click', (e) => {
+    if (e.target.classList.contains('mobile-nav-link') || e.target.classList.contains('color-bar')) {
+        closeNav();
+    }
 });

@@ -13,7 +13,7 @@
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/icon-waveform-primary.svg'; ?>" alt="Waveform" class="icon-waveform-primary">
                 jkaltrocks
             </div>
-            <nav class="desktop-nav">
+            <!-- <nav class="desktop-nav">
                 <ul class="desktop-nav-links">
                     <li class="desktop-nav-link-container desktop-nav-link-container-1">
                         <a href="#services" class="desktop-nav-link">Services</a>
@@ -31,7 +31,7 @@
                         <a href="#contact" class="desktop-nav-link">Request Quote</a>
                     </li>
                 </ul>
-            </nav>
+            </nav> -->
             <div class="menu-icon-container" aria-expanded="false" aria-label="Navigation Menu Icon">
                 <div class="menu-icon">
                     <div class="menu-bar menu-bar-top"></div>
@@ -40,7 +40,7 @@
             </div>
         </div>
         <nav class="mobile-nav side-padding">
-            <ul class="mobile-nav-links">
+            <ul class="mobile-nav-links container-md">
                 <li class="mobile-nav-link-container">
                     <a href="#services" class="mobile-nav-link mobile-nav-link-end">
                         <div class="color-bar"></div>
@@ -54,7 +54,7 @@
                     </a>
                 </li>
                 <li class="mobile-nav-link-container">
-                    <a href="#services" class="mobile-nav-link mobile-nav-link-end">
+                    <a href="#discography" class="mobile-nav-link mobile-nav-link-end">
                         <div class="color-bar"></div>
                         Discography
                     </a>

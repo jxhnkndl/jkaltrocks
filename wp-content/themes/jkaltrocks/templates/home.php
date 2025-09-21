@@ -103,7 +103,7 @@ $contact_description = get_field('contact_section_description');
                             echo '<figure>';
                             echo '<img src="' . esc_url($album['cover_art']['url']) . '" alt="' . esc_attr($album['cover_art']['alt']) . '">';
                             echo '<div class="button-overlay">';
-                            echo '<img src="' . get_template_directory_uri() . '/assets/images/icon-play-button.svg" alt="Play Button" />"';
+                            echo '<img src="' . get_template_directory_uri() . '/assets/images/icon-play-button.svg" alt="Play Button" />';
                             echo '</div>';
                             echo '</figure>';
                             echo '<p>' . esc_html($album['credits']) . '</p>';

@@ -61,8 +61,8 @@ function jk_enqueue_scripts() {
 
     // Mobile nav
     wp_enqueue_script(
-        'jk-mobile-nav-js',
-        get_template_directory_uri() . '/assets/js/mobile-nav.js',
+        'jk-navigation-js',
+        get_template_directory_uri() . '/assets/js/navigation.js',
         array('jk-gsap-animation', 'jk-gsap-animation-scroll-trigger'),
         wp_get_theme()->get('Version'),
         true

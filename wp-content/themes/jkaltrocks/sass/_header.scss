@@ -77,10 +77,6 @@
             width: 2.5rem;
             z-index: 10;
 
-            @include tablet {
-                display: none;
-            }
-
             .menu-icon {
                 align-items: flex-end;
                 cursor: pointer;
@@ -132,6 +128,14 @@
 
         .mobile-nav-link-container {
             height: 2.5rem;
+            transition: all 0.25s ease-in-out;
+            opacity: 0;
+
+            &:hover {
+                .mobile-nav-link .color-bar {
+                    background-color: $dark;
+                }
+            }
 
             .mobile-nav-link {
                 @include text-mobile-nav-link;
