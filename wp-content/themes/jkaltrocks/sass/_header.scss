@@ -158,6 +158,15 @@
         border-top: 1px solid $low-alpha-dark;
         padding: 1.75rem 0 3rem 0;
 
+        p {
+            @include text-footer;
+            color: $dark;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
         .mobile-nav-footer-cta {
             @include text-mobile-nav-cta;
             align-items: center;
@@ -169,15 +178,6 @@
             justify-content: center;
             margin-bottom: 2rem;
             width: 10rem;
-        }
-
-        p {
-            @include text-footer;
-            color: $dark;
-
-            span {
-                font-weight: 700;
-            }
         }
     }
 }

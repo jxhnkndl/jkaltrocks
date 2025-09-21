@@ -73,10 +73,10 @@
                 </li>
             </ul>
             <div class="mobile-nav-footer">
-                <a href="#contact" class="mobile-nav-footer-cta">Request Quote</a>
                 <p>
                     <span>jkaltrocks</span> is an alternative rock and pop songwriter, producer, and educator based out of Richmond, Virginia.
                 </p>
+                <a href="#contact" class="mobile-nav-footer-cta">Request Quote</a>
             </div>
         </nav>
     </header>

@@ -58,7 +58,7 @@ const openNav = () => {
 
         gsap.to(link, {
             opacity: 1,
-            duration: 0.3,
+            duration: 0.2,
             delay: linkAnimationDelay,
             ease: 'power2.inOut'
         });

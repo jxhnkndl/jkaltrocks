@@ -188,6 +188,15 @@ input {
   border-top: 1px solid rgba(0, 0, 0, 0.4);
   padding: 1.75rem 0 3rem 0;
 }
+.mobile-nav .mobile-nav-footer p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  color: #2c2c2c;
+}
+.mobile-nav .mobile-nav-footer p span {
+  font-weight: 700;
+}
 .mobile-nav .mobile-nav-footer .mobile-nav-footer-cta {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
@@ -203,16 +212,6 @@ input {
   justify-content: center;
   margin-bottom: 2rem;
   width: 10rem;
-}
-.mobile-nav .mobile-nav-footer p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 0.875rem;
-  font-style: normal;
-  text-align: center;
-  color: #2c2c2c;
-}
-.mobile-nav .mobile-nav-footer p span {
-  font-weight: 700;
 }
 
 .hero-section {
@@ -602,9 +601,9 @@ input {
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   font-style: normal;
-  text-align: center;
   color: #2c2c2c;
   margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
