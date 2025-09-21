@@ -37,12 +37,14 @@
                 text-decoration: none;
 
                 .album-cell {
+                    
                     figure {
                         margin-bottom: 0.5rem;
                         max-width: 18.75rem;
                         position: relative;
-
+                        
                         img {
+                            border-radius: 0.5rem;
                             object-fit: cover;
                             width: 100%;
                         }
@@ -67,6 +69,12 @@
                             &:hover {
                                 img {
                                     opacity: 1;
+                                }
+                            }
+                            
+                            &:active {
+                                img {
+                                    transform: scale(0.9);
                                 }
                             }
                         }

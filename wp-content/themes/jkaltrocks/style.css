@@ -490,6 +490,7 @@ input {
   position: relative;
 }
 .discography-section-container .album-grid .album-link .album-cell figure img {
+  border-radius: 0.5rem;
   object-fit: cover;
   width: 100%;
 }
@@ -511,6 +512,9 @@ input {
 }
 .discography-section-container .album-grid .album-link .album-cell figure .button-overlay:hover img {
   opacity: 1;
+}
+.discography-section-container .album-grid .album-link .album-cell figure .button-overlay:active img {
+  transform: scale(0.9);
 }
 
 .contact-section {
