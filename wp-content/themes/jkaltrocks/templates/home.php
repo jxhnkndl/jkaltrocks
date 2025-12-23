@@ -106,6 +106,8 @@ $contact_description = get_field('contact_section_description');
                             echo '<img src="' . get_template_directory_uri() . '/assets/images/icon-play-button.svg" alt="Play Button" />';
                             echo '</div>';
                             echo '</figure>';
+                            echo '<p>' . esc_html($album['album_title']) . '</p>';
+                            echo '<p>' . esc_html($album['album_artist']) . '</p>';
                             echo '<p>' . esc_html($album['credits']) . '</p>';
                             echo '</div>';
                             echo '</a>';

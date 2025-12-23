@@ -79,6 +79,14 @@
                             }
                         }
                     }
+
+                    p {
+                        margin-bottom: 0.25rem;
+
+                        &:first-of-type {
+                            font-weight: 700;
+                        }
+                    }
                 }
             }
         }

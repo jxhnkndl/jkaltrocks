@@ -515,6 +515,12 @@ input {
 .discography-section-container .album-grid .album-link .album-cell figure .button-overlay:active img {
   transform: scale(0.9);
 }
+.discography-section-container .album-grid .album-link .album-cell p {
+  margin-bottom: 0.25rem;
+}
+.discography-section-container .album-grid .album-link .album-cell p:first-of-type {
+  font-weight: 700;
+}
 
 .contact-section {
   padding-top: 4rem;
